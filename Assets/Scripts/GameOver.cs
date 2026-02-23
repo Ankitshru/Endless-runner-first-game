@@ -46,7 +46,7 @@ public class GameOver : MonoBehaviour
         }
     }
 
-    private void RestartGame()
+    public void RestartGame()
     {
         Time.timeScale = 1f;
 
