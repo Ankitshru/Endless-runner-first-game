@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
 
     [SerializeField] private GameObject gameOverUI;
 
-    private bool isGameOver = false;
+    public bool isGameOver = false;
 
     private void Awake()
     {
@@ -49,6 +49,12 @@ public class GameOver : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        isGameOver = false;
+
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.ResetScore();
+        }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
