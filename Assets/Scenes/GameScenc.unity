@@ -1183,14 +1183,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstackleSpawner
   obstacklePrefabs:
   - {fileID: 353115406970628908, guid: d24a96f3c78d62c40b71d7408bf98805, type: 3}
-  - {fileID: 1679516500892194666, guid: cfb685036c59360469e3be8986b840ef, type: 3}
+  - {fileID: 5651735209374660565, guid: cfb685036c59360469e3be8986b840ef, type: 3}
   - {fileID: 1668700189730279129, guid: 95af3a0ae6d039746a18a462f311b3f3, type: 3}
   spawnInterval: 2
   minSpawnInterval: 1
   spawnIntervalDecrease: 0.05
   spawnDistance: 15
   spawnYPosition: -3.5
-  player: {fileID: 0}
+  coinPrefab: {fileID: 8576493036213739136, guid: 26a025230630e3046b94e61704c36064, type: 3}
+  coinSpawnChance: 0.5
+  coinHeight: -2
+  player: {fileID: 1626146701}
   despawnDistance: 20
 --- !u!4 &1366797795
 Transform:

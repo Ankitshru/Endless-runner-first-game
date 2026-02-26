@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public static GameOver Instance;
-
     [SerializeField] private GameObject gameOverUI;
-
     public bool isGameOver = false;
-
     private void Awake()
     {
         if (Instance == null)

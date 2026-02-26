@@ -12,9 +12,11 @@ public class ScoreManager : MonoBehaviour
     [Header("UI Reference")]
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
+    [SerializeField] private TextMeshProUGUI coinCountText;
 
     private float score = 0f;
     private float highScore = 0f;
+    private int coinsCollected = 0;
 
     void Awake()
     {
@@ -46,8 +48,8 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = score;
             PlayerPrefs.SetFloat("HighScore", highScore);
-
         }
+
 
         UpdateUI();
     }
@@ -61,13 +63,26 @@ public class ScoreManager : MonoBehaviour
         if (highScoreText != null)
         {
             highScoreText.text =    "Best: " + Mathf.FloorToInt(highScore).ToString();
-
         }
+        if (coinCountText != null)
+        {
+            coinCountText.text = "Coins: " +  coinsCollected.ToString();
+        }
+    }
+
+    public void AddCoinScore(int coinValue)
+    {
+        score += coinValue;
+        coinsCollected++;
+        UpdateUI();
     }
 
     public void ResetScore()
     {
         score = 0f;
+        coinsCollected = 0;
         UpdateUI();
     }
+
+    
 }

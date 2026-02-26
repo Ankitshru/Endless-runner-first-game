@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Obstackle
+  - collectibles
   layers:
   - Default
   - TransparentFX
