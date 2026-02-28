@@ -55,4 +55,18 @@ public class GameOver : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void ReturnToMenu()
+{
+    Time.timeScale = 1f;  // Unpause
+    
+    if (SceneTransition.Instance != null)
+    {
+        SceneTransition.Instance.LoadScene("MainMenu");
+    }
+    else
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+}
 }

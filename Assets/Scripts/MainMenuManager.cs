@@ -33,6 +33,7 @@ public class MainMenuManager : MonoBehaviour
         {
             SceneTransition.Instance.LoadScene("GameScene");
         }
+        
         else
         {
             SceneManager.LoadScene("GameScene");
